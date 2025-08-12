@@ -1,23 +1,17 @@
-
-<script>
-export default {
-  name: 'DefaultLayout'
-}
+<script setup>
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
 </script>
 
 <template>
   <div class="layout">
-    <header class="header">
-      <h1>Шапка</h1>
-    </header>
+    <Header />
 
     <main class="main">
       <slot />
     </main>
 
-    <footer class="footer">
-      <p>Футер</p>
-    </footer>
+    <Footer />
   </div>
 </template>
 
@@ -28,17 +22,8 @@ export default {
   flex-direction: column;
 }
 
-.header {
-  flex-shrink: 0;
-}
-
 .main {
   flex: 1;
   overflow-y: auto;
 }
-
-.footer {
-  flex-shrink: 0;
-}
 </style>
-

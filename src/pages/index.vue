@@ -1,18 +1,11 @@
 <script setup>
-</script>
-
-<script>
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'IndexPage'
+defineOptions({
+  name: 'IndexPage',
 })
 </script>
 
 <template>
-  <div class="index-container">
-
-  </div>
+  <div class="index-container"></div>
 </template>
 
 <style lang="scss">
