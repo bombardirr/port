@@ -24,3 +24,40 @@ body {
 #app {
   height: 100vh;
 }
+
+$radius-primary: 16px;
+$radius-secondary: 8px;
+
+$gradient-primary: linear-gradient(135deg, #161f24 0%, #121b20 100%);
+
+$white-primary: #eee;
+
+$black-primary: rgb(20, 16, 26);
+
+$screen-primary: rgb(164, 146, 105);
+$screen-secondary: rgba(96, 89, 102, 1);
+
+$device-primary: rgba(182, 177, 167, 1);
+
+/* Элемент будет вдавленным */
+.inset {
+  height: 100%;
+  border-radius: $radius-primary;
+  box-shadow:
+    inset -4px -4px 5px #fff,
+    inset 4px 2px 5px #b9bbc4;
+}
+
+/* Элемент будет выпуклым */
+.outset {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  box-shadow:
+    2px 2px 2px #b9bbc4,
+    -1px -1px 7px #fff;
+}
