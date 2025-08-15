@@ -39,9 +39,7 @@ defineOptions({
   border-radius: $radius-primary;
   background: $device-primary;
   //overflow: hidden;
-  box-shadow:
-    0 0 0 8px rgba(182, 177, 167, 0.7),
-    0 0 4px 11px rgba(0, 0, 0, 0.7);
+  box-shadow: $shadow-body-primary;
 
   &-screen {
     grid-column: 2 / 5;

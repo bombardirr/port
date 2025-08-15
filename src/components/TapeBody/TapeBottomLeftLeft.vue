@@ -14,7 +14,10 @@ import Button from '../Button/index.vue'
 .tape-bottom-left_left {
   background: $device-primary;
   border-radius: $radius-primary;
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.5);
-  padding: 20px;
+  box-shadow:
+    inset 1px 1px 1px 1px rgba(255, 255, 255, 0.5),
+    inset -1px -1px 1px 1px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  overflow: hidden;
 }
 </style>

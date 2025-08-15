@@ -17,7 +17,7 @@
   background: $device-primary;
   padding: 8px;
   border-radius: $radius-secondary;
-  box-shadow: 0 0 1px 1px rgba(46, 41, 38, 0.8);
+  box-shadow: $shadow-primary;
 
   .border-level-a {
     width: 100%;
@@ -25,14 +25,14 @@
     padding: 10px;
     background: $screen-secondary;
     border-radius: $radius-secondary;
-    box-shadow: inset 0 0 4px 2px rgba(46, 41, 38, 0.8);
+    box-shadow: $shadow-inset-primary;
 
     .border-level-b {
       width: 100%;
       height: 100%;
       padding: 14px;
       background: $black-primary;
-      box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5);
+      //box-shadow: $shadow-inset-primary;
 
       .border-level-c {
         width: 100%;

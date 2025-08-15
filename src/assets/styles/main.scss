@@ -34,30 +34,20 @@ $white-primary: #eee;
 
 $black-primary: rgb(20, 16, 26);
 
+$orange-primary: rgba(230, 124, 72, 1);
+$orange-secondary: rgba(245, 64, 15, 1);
+
 $screen-primary: rgb(164, 146, 105);
-$screen-secondary: rgba(96, 89, 102, 1);
+//$screen-secondary: rgba(96, 89, 102, 1);
+$screen-secondary: rgba(33, 161, 198, 1);
 
-$device-primary: rgba(182, 177, 167, 1);
+//$device-primary: rgba(182, 177, 167, 1);
+$device-primary: rgba(204, 202, 203, 1);
 
-/* Элемент будет вдавленным */
-.inset {
-  height: 100%;
-  border-radius: $radius-primary;
-  box-shadow:
-    inset -4px -4px 5px #fff,
-    inset 4px 2px 5px #b9bbc4;
-}
+$shadow-primary: inset 1px 1px 1px 1px rgba(255, 255, 255, 0.5),
+inset -1px -1px 1px 1px rgba(0, 0, 0, 0.5);
+$shadow-inset-primary: inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5),
+inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+$shadow-body-primary:inset 1px 1px 1px 1px rgba(255, 255, 255, 0.5),
+inset -1px -1px 1px 1px rgba(0, 0, 0, 0.5);
 
-/* Элемент будет выпуклым */
-.outset {
-  position: absolute;
-  top: 50%;
-  left: 8px;
-  transform: translateY(-50%);
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  box-shadow:
-    2px 2px 2px #b9bbc4,
-    -1px -1px 7px #fff;
-}
