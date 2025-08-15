@@ -4,18 +4,23 @@ import { ref } from 'vue'
 
 const buttonRef = ref(null)
 const buttonRingCenterRef = ref(null)
+const lineRef = ref(null)
 const isClicked = ref(false)
 
 const click = () => {
   isClicked.value = !isClicked.value
   isClicked.value
     ? gsap.to(buttonRingCenterRef.value, {
-        boxShadow: '$shadow-inset-primary',
-        duration: 0.8,
+        boxShadow:
+          'inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5), inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5)',
+        scale: 0.9,
+        duration: 0.2,
       })
     : gsap.to(buttonRingCenterRef.value, {
-        boxShadow: '$shadow-primary',
-        duration: 0.8,
+        boxShadow:
+          'inset 1px 1px 1px 1px rgba(255, 255, 255, 0.5), inset -1px -1px 1px 1px rgba(0, 0, 0, 0.5)',
+        scale: 1,
+        duration: 0.2,
       })
 }
 </script>
@@ -23,9 +28,9 @@ const click = () => {
 <template>
   <div class="button" ref="buttonRef" @click="click">
     <div class="button-ring">
-      <div class="button-ring-center" ref="buttonRingCenter">
+      <div class="button-ring-center" ref="buttonRingCenterRef">
         <!--        <div class="octagon" v-for="octagon in 20" :key="octagon"></div>-->
-        <div class="line" v-for="line in 3" :key="line"></div>
+        <div class="line" ref="lineRef" v-for="line in 3" :key="line"></div>
       </div>
     </div>
   </div>
@@ -67,8 +72,11 @@ const click = () => {
       gap: 20%;
       cursor: pointer;
       overflow: hidden;
-      border-radius: $radius-secondary;
       box-shadow: $shadow-primary;
+      border-radius: $radius-secondary;
+      //box-shadow: none;
+      transform-origin: center center;
+      will-change: transform, box-shadow;
 
       .line {
         background: rgba($black-primary, 0.7);
