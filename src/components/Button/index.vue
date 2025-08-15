@@ -1,35 +1,9 @@
-<script setup>
-import { gsap } from 'gsap'
-import { ref } from 'vue'
-
-const buttonRef = ref(null)
-const buttonRingCenterRef = ref(null)
-const lineRef = ref(null)
-const isClicked = ref(false)
-
-const click = () => {
-  isClicked.value = !isClicked.value
-  isClicked.value
-    ? gsap.to(buttonRingCenterRef.value, {
-        boxShadow:
-          'inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5), inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5)',
-        scale: 0.9,
-        duration: 0.2,
-      })
-    : gsap.to(buttonRingCenterRef.value, {
-        boxShadow:
-          'inset 1px 1px 1px 1px rgba(255, 255, 255, 0.5), inset -1px -1px 1px 1px rgba(0, 0, 0, 0.5)',
-        scale: 1,
-        duration: 0.2,
-      })
-}
-</script>
+<script setup></script>
 
 <template>
-  <div class="button" ref="buttonRef" @click="click">
+  <div class="button" ref="buttonRef">
     <div class="button-ring">
       <div class="button-ring-center" ref="buttonRingCenterRef">
-        <!--        <div class="octagon" v-for="octagon in 20" :key="octagon"></div>-->
         <div class="line" ref="lineRef" v-for="line in 3" :key="line"></div>
       </div>
     </div>
@@ -60,9 +34,6 @@ const click = () => {
     box-shadow: $shadow-primary;
 
     &-center {
-      //display: grid;
-      //grid-template-columns: repeat(4, 1fr);
-      //grid-template-rows: repeat(5, 1fr);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -74,7 +45,6 @@ const click = () => {
       overflow: hidden;
       box-shadow: $shadow-primary;
       border-radius: $radius-secondary;
-      //box-shadow: none;
       transform-origin: center center;
       will-change: transform, box-shadow;
 
@@ -84,27 +54,6 @@ const click = () => {
         height: 2px;
         transform: rotate(-45deg);
       }
-
-      //.octagon {
-      //  clip-path: polygon(
-      //    20% 0%,
-      //    80% 0%,
-      //    // Верхний срез
-      //    100% 20%,
-      //    100% 80%,
-      //    // Правый срез
-      //    80% 100%,
-      //    20% 100%,
-      //    // Нижний срез
-      //    0% 80%,
-      //    0% 20% // Левый срез
-      //  );
-      //
-      //  background: $screen-secondary;
-      //  border: 1px solid $black-primary;
-      //  width: 100%;
-      //  height: 100%;
-      //}
     }
   }
 }

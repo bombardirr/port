@@ -1,6 +1,5 @@
 <script setup>
-import Tape from '../components/TapeBody/index.vue'
-import Switcher from '../components/Switcher/index.vue'
+import Screen from '../components/Screen/index.vue'
 defineOptions({
   name: 'IndexPage',
 })
@@ -8,9 +7,10 @@ defineOptions({
 
 <template>
   <div class="hero">
-    <Switcher />
+    <!--    <Switcher />-->
     <div class="hero__container">
-      <Tape />
+      <!--      <Tape />-->
+      <Screen />
     </div>
   </div>
 </template>
@@ -22,7 +22,7 @@ defineOptions({
   position: relative;
   height: 100%;
   padding: 5vh 5vw;
-  background: $gradient-primary;
+  background: $black-secondary;
 
   &__container {
     position: relative;
@@ -31,7 +31,8 @@ defineOptions({
     align-items: center;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.6);
+    background: $black-secondary;
+    padding: 5px;
   }
 }
 </style>

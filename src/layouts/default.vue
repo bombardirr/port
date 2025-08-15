@@ -1,11 +1,11 @@
 <script setup>
-import Header from '@/components/Header.vue'
+import Index from '@/components/Header/index.vue'
 import Footer from '@/components/Footer.vue'
 </script>
 
 <template>
   <div class="layout">
-    <Header />
+    <Index />
 
     <main class="main">
       <slot />
@@ -16,10 +16,16 @@ import Footer from '@/components/Footer.vue'
 </template>
 
 <style lang="scss">
+@use '@/assets/styles/main.scss' as *;
 .layout {
-  height: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  background: $black-secondary;
 }
 
 .main {
